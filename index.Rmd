@@ -8,7 +8,11 @@ output:
   xaringan::moon_reader:
     css: [default,hygge,rutgers,rutgers-fonts]
 editor_options: 
-  chunk_output_type: console
+ nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
 ---
 
 ```{r ,echo=FALSE, include=FALSE}
