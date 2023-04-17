@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Online presentation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ivan Andreu Rascon" />
+    <script src="index_files/header-attrs-2.20/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/rutgers.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/rutgers-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Online presentation
+]
+.author[
+### Ivan Andreu Rascon
+]
+.institute[
+### Rutgers
+]
+.date[
+### 2023/3/21 (updated: 2023-04-16)
+]
+
+---
+
+
+
+
+
+# The paper
+https://www.journal-labphon.org/article/id/6169/
+
+
+- This paper is researchs the phenomenon of resyllabification in Spanish, specifically the durational properties of word-final /s/. 
+- Authors study acoustic data from 11 speakers of Peninsular Spanish to evaluate the evidence for resyllabification (in Praat). 
+- Results show that word-final pre-vocalic /s/ has increased duration compared to coda /s/ but is shorter compared to word-initial or word-medial pre-vocalic /s/. 
+- This challenges the idea that derived onsets become phonologically indistinguishable from canonical onsets. 
+- The authors consider partial resyllabification as an alternative in Spanish. 
+
+---
+# Statistical analysis 1
+- They used R studio with the nlme package to perform a linear mixed-effects regression model.
+- The models included Condition (six different conditions related to the /s/ sound and its position) as a fixed effect, and the intercept was set to the Vs#V condition. 
+- A maximal random effects structure was used, including random intercepts for Speaker and Item and a random slope for Condition within Speaker.
+- The authors considered the potential impact of speakers coming from monolingual and bilingual regions of Spain by adding Region as an additional fixed predictor and including an interaction between Region and Condition.
+---
+# Statistical analysis 2
+
+- The effect of Region and its interaction with Condition were found to be non-significant, and thus not included in the final models reported in Section 3.
+- The Appendix reports the results of a model of /s/-duration, which is the key phonetic parameter in the study, including the non-significant interaction between Region and Condition.
+- The random effects structure was maximal, which included random intercepts for Speaker and Item, as well as a random slope for Condition within Speaker. The authors also considered whether the results differed between speakers from monolingual and bilingual regions of Spain. 
+- They added Region as an additional fixed predictor and included an interaction between Region and Condition in the models. However, the effect of Region and its interaction with Condition were not significant, so these factors were not included in the final models reported in Section 3.
+
+---
+
+# Results (/s/ duration)
+
+&lt;img src="images/Untitled.png" width="50%" /&gt;
+
+- The duration of /s/ was significantly affected by condition (F=45.10, df=182, p&lt;0.001).
+- Average derived onset /s/ duration: 11.84 ms greater than word-final coda, 11.68 ms less than word-initial onset.
+- Word-medial codas: shortest duration, 17.24 ms shorter than derived onsets.
+- Fake geminates: largest /s/ duration, 36.29 ms greater than derived onsets.
+- Word-medial onsets vs. derived onsets: small (5.67 ms) but significant duration difference, word-medial onsets longer.
+
+---
+# Results (/s/ duration)
+
+- Pairwise comparisons: most significant, except word-medial codas vs. word-final codas.
+- Random slope for Condition within Speaker: significantly improved model fit (p&lt;0.001), indicating individual variation.
+- General duration trend for most speakers: word-medial codas &lt; word-final codas &lt; derived onsets &lt; word-medial onsets &lt; word-initial onsets, with some exceptions.
+- Derived onset /s/ distribution: unimodal, not bimodal; no increased standard error compared to word-medial conditions.
+- Distribution of /s/-duration data: right-skewed; no major differences between non-normalized and normalized dependent variable models.
+
+---
+# V1 duration
+
+- Condition had a significant main effect on V1 duration (F=14.83, df=182, p&lt;0.001).
+- Vowels before derived onsets: average 7.25 ms longer than vowels before word-final codas.
+ V1 duration greater in context of derived onsets compared to:
+  a. Vowels before word-medial codas (β=-17.28)
+  b. Vowels before word-medial onsets (β=11.43)
+- Vowels before fake geminate /s/: 5.64 ms longer than those before derived onsets.
+- No significant difference in duration between vowels before derived onsets and word-initial onsets.
+- No significant difference in model fit between models with maximal random effect structure and random intercepts only, indicating no significant inter-speaker differences.
+- Researchers did not find a significant main effect of Condition on V2 duration
+
+---
+
+&lt;img src="images/plot 2.png" width="50%" /&gt;&lt;img src="images/plot 1.png" width="50%" /&gt;
+---
+# Main findings
+The study found that prosodic characteristics (syllabic affiliation and position within words) affected two acoustic cues: /s/ duration and V1 duration. Results showed that onset /s/ had generally greater duration than coda /s/, and that vowel duration is greater in open syllables compared to closed syllables. 
+Derived onsets showed significant differences in /s/ duration compared to other environments. 
+V1 duration was the same preceding word-initial onsets and derived onsets, but greater compared to word-final coda context. The data showed inter-speaker variation with respect to /s/ duration.
+
+---
+
+# Phonological representation and the phonetic duration effects
+
+The strong resyllabification hypothesis, which predicted derived onsets and word-initial onsets to be phonetically indistinguishable, was not proyected  by the data. 
+Weaker versions of the resyllabification hypothesis were considered, such as partial resyllabification leading to ambisyllabic representation or prosodic misalignment. 
+However, these representations could not fully account for the observed differences in duration. 
+
+---
+# Syllable structure 
+
+- The relevance of syllable structure in the resyllabification hypothesis is questioned.
+- The data collected may be better explained by differences in timing between consonant-vowel and consonant-consonant sequences. 
+- A gestural account might be more suitable to explain the durational differences observed in pre-vocalic /s/. 
+- The syllable's role in language processing may be peripheral or even redundant. 
+- Two possible solutions for modeling gestural coordination are discussed: 
+  Direct interaction between phonetic and higher-level constraints 
+  Interaction between prosodic boundaries and phonetic constraints.
+
+
+---
+# Appropriateness/novelty of analysis
+
+The researchers used linear mixed-effects models to investigate the relationships between prosodic positions, /s/ duration, and V1 duration. 
+This approach is well-suited for analyzing continuous dependent variables in repeated measures designs, and it allows for the incorporation of both fixed and random effects. 
+Furterhmore, the models allowed the researchers to test their hypotheses and to make comparisons between different prosodic positions.
+
+While the analysis seems appropriate, it's important to consider other factors, such as the quality of the data, the assumptions of the statistical tests, and the overall research design.
+In my opinion the study lacks of enough participants. 
+A small sample size will have reduced statistical power, making it more difficult to detect significant effects, and can also increase the likelihood of Type II errors (failing to reject a false null hypothesis). 
+
+---
+
+# Did they properly/accurately interpret their findings?
+
+The researchers were careful not to overstate their conclusions, acknowledging that the strong resyllabification hypothesis was not confirmed for any of the speakers. They also highlighted the individual variation observed in their data, which indicates a nuanced approach to interpreting the results.
+
+---
+# Briefly describe why/what you liked or disliked about their analysis
+
+I think the content we covered in class was sufficient to fully understand the study. 
+The study was also well explained and written. 
+
+However, one aspect I disliked was the use of bar graphs.
+The study uses some bar graphs, which can be limited due to their focus on individual data points rather than trends,and thus can create potential misleading visuals.
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

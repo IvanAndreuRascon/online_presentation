@@ -1,0 +1,828 @@
+---
+title: "Untitled"
+shorttitle: "Example"
+author: "Ivan"
+date: "Rutgers University"
+bibliography: r-references.bib
+ident: true
+execute: 
+  echo: false
+  message: false
+  warning: false
+format: 
+  docx:
+    reference-doc: "../ref_doc/apa_style.docx"
+    number-sections: true
+    highlight-style: github
+    code-line-numbers: true
+    fig-align: center
+    tbl-colwidths: true
+editor_options: 
+  markdown: 
+    wrap: sentence
+  chunk_output_type: console
+metadata: 
+  subject: linguistics
+  category: article
+---
+
+```{r}
+#| label: setup
+source(here::here("scripts", "r", "99_small_data.R"))
+```
+
+
+# Abstract
+
+This research study aims to investigate the effects of audiovisual input  for second-language learners of Spanish. 
+
+195 English second language of Spanish participants took part in this study. 
+Results…
+
+\newpage
+
+
+# Introduction
+
+The complexity of speech perception goes beyond auditory processing, being able to integrate multimodal data, which includes visual cues derived from lip configurations and movement.
+One well-known example that supports bimodal perception is the McGurk effect [@mcgurk]. 
+In this phenomenon, visual cues from the speaker's lips can influence what is heard, leading to a mismatch between the auditory signal and the visually perceived input.
+These findings indicate that visual information can generate a competition between visual and auditory inputs, with speakers able to process conflicting cues depending on the situation.
+
+
+While there is a significant body of literature on the use of visual and aural input for individuals within their first language, or subjects  with disabilities there is a paucity of research examining these effects on Spanish language learners.
+Research in the field of bimodal speech perception suggests that access to a visible talking face during communication can have beneficial implications for second language learning eg: [@brancazio2005use, @hazan2006use]. 
+Visual information from the lips, jaw, face, tongue, and teeth can provide additional cues that may ease input processing, particularly for learners whose linguistic abilities are still developing. 
+
+
+This research aims to explore the potential implications of visual access to speech articulation for second language learners of Spanish.
+Specifically, three experimental studies will explore vowel recognition, vowel alternation, and resyllabification processes, with the ultimate goal of providing insights into how visual cues can be used to enhance phonetic discrimination in second language learners.
+
+
+\newpage
+
+
+## Theoretical approach to visual perception: Motor theory,SLM, PAM/L2 
+
+Several approaches have explained the multisensory approach of speech perception from a theoretical point of view. 
+The Motor Theory of Speech Perception [@liberman] approaches the ability to recognize the intended phonetic gestures of a speaker based on the acoustic signals received. 
+This process relies on the speaker's ability to extract invariant features from the acoustic signal and to use these features to identify the specific motor commands that underlie the speaker's articulatory movements. 
+Acording Liberman's theory these motor commands are represented as linguistic gestures, which are abstract representations of the movements of the articulators required to produce different speech sounds. 
+
+
+Perceiving language is a complex process that involves integrating information from multiple sources, including the acoustic signal, linguistic knowledge, and context. 
+The formation of phonetic categories is facilitated by a speaker's specific module that links acoustic signals to motor commands involved in articulating speech sounds such as "tongue backing," "lip rounding," and "jaw raising."
+By mapping acoustic signals onto these motor commands, the brain can create phonetic categories, which are the basic building blocks of language, stored in a module. 
+For example, the sound /p/ is produced by a brief closure of the lips followed by a sudden release of air.
+This acoustic signal is associated with the motor command of lip closure, one of the invariant motor commands that form the basis of phonetic categories.
+Similarly, the sound /a/ is associated with the invariant motor command of tongue backing, which involves the retraction of the tongue towards the back of the mouth. 
+These motor commands allow the brain to organize and categorize the vast array of acoustic signals that make up speech, allowing us to recognize and produce distinct sounds and words.
+However, there is not always a perfect relationship, as the movements required to produce a particular gesture associated with a single speech sound do not usually co-occur. 
+The movements linked to consecutive sounds often overlap significantly. 
+This phenomenon of coarticulation leads to the changing shape of the vocal tract and, thus the resulting signal being influenced by multiple gestures simultaneously.
+
+
+Liberman's motor theory has often been associated with the McGurk effect, which is a phenomenon where visual input from the speaker's face can affect how speech sounds are perceived. 
+In [@mcgurk] study demonstrated this effect by showing that when a video of a person saying "ga" (a velar stop sound) was dubbed with an audio recording of "ba" (a bilabial stop sound), listeners perceived an intermediate sound, "da" (an alveolar stop sound).
+When the visual and auditory stimuli are mismatched, the speaker may integrate the two sources of information to create a fused perception that is different from either source alone. 
+The motor theory of speech suggests that this integration may be based on the internal model of the motor movements used to produce the speech sounds, which can be activated by the visual input from the speaker's face.
+
+
+Categorical perception of sound, and the ability to perceive speech sounds as belonging to discrete categories, also plays a role in the McGurk effect. 
+When the auditory and visual stimuli belong to different phonetic categories, the brain may be more likely to create a fused perception different from either source alone. 
+This has been used in research to argue the multisensory component of speech perception [@flege2021revised, @levy2008perception, @polka1995linguistic].
+
+
+Taking this theoretical perspective into experimental studies, research has shown that the influence of visual cues on speech perception can vary across different languages. 
+This is languages that are not tonal, such as English and Spanish, tend to be more influenced by visual cues than tonal languages like Chinese. 
+This may be because tonal languages rely heavily on pitch variation to convey meaning, which requires a greater reliance on auditory processing [@burnham1998effect], and less attention to the mouth articulation.
+
+
+In the realm of speech perception, an adjacent perspective to consider is the Direct Realist Theory [@fowler1986event].
+Similar to the MT, this theoretical aproach proposes that speech perception is rooted in the analysis of articulatory events, rather than acoustic events. 
+The Direct Realist Theory suggests that speech perception does not hinge on a dedicated perceptual module, but rather on the visual perception of surface layout. 
+Essentially, talkers' gestures, like movements of the lips, help to organize the acoustic signal that is subsequently decoded by the listener. 
+
+
+The term "direct" in Direct Realism refers to the idea that perception of gestures and sounds is rich enough by itself and does not require a perceptual module to interpret them. 
+In the absence of a specific device or module for processing speech, humans may rely on all available information to extract meaning. 
+The Direct Realist Theory of Speech Perception suggests that the perception of speech is a complex process that relies on the integration of multiple sources of information, including articulatory gestures and acoustic signals, to arrive at a meaningful interpretation of spoken language.
+
+
+Another theoretical approach is The Perception Assimilation Model in second language acquisition (PAM-L2), developed by [@ best2007nonnative], this theoretical approach focuses on phonetic perception in language learning. 
+This model investigates how a learner's first language influences their perception of sounds in their second language. 
+PAM-L2 suggests that learners assimilate L2 sounds with their most similar L1 sounds, resulting in different assimilation outcomes. 
+These outcomes include two-category assimilation, single-category assimilation, category-goodness assimilation, uncategorized-categorized assimilation, and non-assimilable effects. 
+By understanding these outcomes, teachers can better predict and address learners' difficulties in discriminating between L2 sounds. 
+The model also emphasizes the importance of articulatory characteristics in phonetic perception, which can help learners improve their pronunciation in their second language.
+
+
+Although the "PAM/L2" theory does not explicitly address bimodal speech perception, in later research [@hazan2006use] categorizes visual input into three types of visemes: (1) visual input that can be present in both L1 and L2, (2) visual input only in L2, and (3) visual input that differs between L1 and L2. Learners are expected to have more difficulty visually perceiving in the type (3).
+
+## Visual perception 
+When segmenting spoken speech, humans consciously or unconsciously search for additional sources of input that help them process a given elocution. 
+The position where a speaker articulates a sound is essential for distinguishing between certain consonants, such as /b/, /d/, and /g/. 
+Acoustically, this information is conveyed by differences in the frequency of the second formant (F2). 
+As defined by [@fisher1968confusions] in auditory speech, the smallest distinguishable unit is the phoneme, while in visual speech, it is the viseme, which refers to speech gestures that are indistinguishable during visual-only presentation.
+A significant limitation of visual-only speech signals is the one-to-many mapping between the basic units of phonemes and visemes. For instance, while /p/ and /b/ can be distinguished acoustically by differences in voice onset times, visually, they are nearly identical.
+
+
+Studies indicate that lip-reading is widespread among individuals, regardless of their hearing capacity.
+Access to visible cues related to articulation can enhance comprehension of auditory speech that may be affected by different factors like background noise eg [@visualnoise, @visualnoise2, @visualnoise3]. 
+In [@visualnoise3], researchers investigated how individuals' ability to comprehend speech is impacted when the auditory signal is weakened in background noise. 
+Participants were presented with speech stimuli that were degraded acoustically and were then given access to the visual articulators, allowing them to see the speaker's lips, tongue, and jaw movements to supplement the degraded auditory signal.
+The study's findings indicated that participants who were able to observe the visual articulators during the task performed better than those who did not have access to them. 
+
+
+The study of visual articulators when the audio input was degraded was also attended in [@peelle2015prediction]. 
+They argue that even when speech is intelligible based solely on auditory information, adding visual information can reduce the cognitive demands placed on listeners by improving prediction precision. 
+The authors propose a framework of temporally focused lexical competition to explain these findings. 
+According to this framework, visual speech information affects auditory processing in two stages of integration. 
+The early stage involves increasing sensitivity to acoustic information through the integration of visual and auditory information. The late stage involves incorporating specific information about a speaker's articulators to constrain the number of possible candidates in a spoken utterance. 
+Ultimately, there is constant competition between the aural information received and the speaker's articulator’s set of possible word candidates.
+
+
+In the same line of argumentation, [@tye2007auditory] conducted a study in which adult participants completed a repetition task, where target words spoken were presented in auditory-only, visual-only, and audiovisual speech conditions.
+Results indicated that participants' accuracy in repeating words was similar in the audiovisual condition and the unimodal condition. 
+Significantly, differences in performance in the audiovisual speech condition were attributed to intersection density.
+Intersection density was defined in the study as a competitor, either aural (phoneme) or visual (viseme), which made a minimal pair with the target word. 
+Words with a larger intersection density were associated with poorer recognition compared to words with a smaller intersection density. 
+Their findings suggest that lexical competition is jointly constrained by both auditory and visual information during speech recognition.
+
+
+These studies can be related to both the McGurk effect [@mcgurk] and Liberman's motor theory [@liberman] as they demonstrate that speech perception involves more than just the competition between lexical elements. 
+In addition to the phonetic information conveyed by auditory cues, speech perception also involves the visual articulators, which compete to provide additional information to the listener. 
+This competition between auditory and visual cues may result in the integration of both sources of information, as seen in the McGurk effect, where visual input can override auditory input in the perception of speech sounds.
+
+## Visual perception in L2
+
+Moving on to visual perception within L2, this section will examine how bilingual speakers behave when they not only have two competing language systems but are also allowed to attend the visual language articulators.
+In [@desroches2022dynamics] used a picture/spoken-word matching paradigm to investigate how bilinguals and monolinguals process language. 
+Specifically, the researchers examined whether bilinguals activate the labels of pictures in both languages when performing a task in their first language, and how this relates to cross-language connections between lexical representations and phonology. 
+ERP results suggest that bilinguals automatically activate lexical options from both languages when identifying pictures, even when they only expect input in their dominant language. 
+This indicates that there are top-down cross-language connections between lexical representations and phonology in bilinguals. 
+The findings suggest that bilinguals have a more complex and flexible language processing system than monolinguals, as they are able to activate and use multiple languages simultaneously.
+
+
+In the same line of argumentation [@marian2018language] explores how being bilingual impacts individuals’ auditory and visual information processing. 
+This question was responded based on the information extracted from early and late bilingual speakers of Korean and English.
+The study indicates that language background influences cross-modal integration, with bilinguals having a solid visual influence and experiencing the McGurk effect more often than monolinguals. 
+Researchers suggest that learning and monitoring multiple languages can have lasting consequences on how individuals process auditory and visual information.
+
+
+The overall body of research suggests that L1 and L2 listeners benefit from using additional visual cues from lipreading to aid their speech comprehension. 
+L2 learners pass through developmental stages similar to L1 listeners in integrating lipreading with auditory speech. 
+The L2 proficiency is a crucial factor in gaining AV speech benefits, with higher proficiency resulting in better integration of audio and visual information and improved comprehension of spoken language. 
+This is  L2 learners with higher proficiency integrate audio and visual information more effectively, leading to improved comprehension of spoken language eg: [@brancazio2005use, @hazan2006use]. 
+However, L2 learners face challenges in perceiving L2 sounds and contrasts due to differences in the segmental inventories of their L1 and L2.
+
+
+Nevertheless, is also widely accepted in the research literature that adult second language learners experience difficulties in perceiving L2 sounds and contrasts compared to native speakers. 
+These difficulties are attributed to the differences in the segmental inventories of their first language (L1) and L2, resulting in challenges in differentiating between sounds that are not present in their L1, leading to inaccuracies in pronunciation and comprehension of L2 [@flege2021revised, @levy2008perception, @polka1995linguistic].
+
+
+Several studies have suggested that the L1 phoneme inventory can influence how L2 learners process visual input. 
+For instance, [@pegg1992preference] found that French native listeners confused the English interdental fricative /ð/ with /d/ or /t/, implying that L2 listeners adjust their percepts based on their L1 phonology. 
+Similarly, [@hazan2002audiovisual] presented sound contrasts that differed visually (e.g. /b/ and /v/) and those that did not differ visually (e.g. /b/ and /p/) to Spanish L2 learners of English, showing that the visually salient sound contrast was perceived by some L2 learners. 
+They also found that learners in the earlier stages of L2 acquisition were less sensitive to visual cues than more advanced learners. 
+Moreover, they noted that the contrast of /b/ and /v/ had an allophonic status in the participants’ L1 Spanish and thus, could not be discriminated as easily as a contrast of two sounds with phonemic status.
+
+
+Similarly,  [@hazan2006use] demonstrated that Spanish L2 learners of English made fewer errors in recognizing the manner and place of articulation when visual information from lipreading was available. 
+Their results showed that perceiving unfamiliar sounds in L2 speech is more challenging than perceiving sounds in the L2 that also exist in the L1, and AV speech input can facilitate this process. 
+However, some sound contrasts may be acquired faster than others, depending on their frequency of occurrence [@best2007nonnative, @leonte2018supplementation].
+
+
+A similar approach can be found in [@navarra2007hearing] when aurally perceiving unfamiliar sounds become a challenge.
+The study investigated how Spanish-Catalan bilinguals discriminate the vowel contrast /e/ and /ɛ/. 
+They found that in unimodal auditory speech, Spanish-dominant listeners do not perceive a difference, while AV speech input allows for better discrimination of the sounds in both groups, suggesting that reading from the lips supports both L1 and L2 sound discrimination.
+
+
+Another example of how language knowledge can influence perception is the phenomenon known as perceptual repair, as described in a study [@darcy2019blue]. 
+Spanish lacks native words that start with consonant clusters beginning with /s/ (e.g., /sp/, /st/), and instead typically uses an initial /e/ before the /s/. 
+However, when Spanish-English bilinguals encounter words beginning with /s/ (usually borrowed from other languages like English), they often report hearing an illusory /e/ before the /s/. 
+Interestingly, the degree of this effect was affected by bilinguals' proficiency in English: Spanish-dominant bilinguals reported fewer instances of perceptual repair than Spanish monolinguals, and English-dominant bilinguals reported fewer instances than Spanish-dominant bilinguals.
+
+
+More substantial AV enhancement evidence was presented by [@inceoglu2021exploring] in the recognition and training of French vowels for L2 listeners. 
+The author discusses the potential effects of visual salience, with some sounds being more difficult for L2 learners to acquire than others. 
+Visually salient phonemes, which belong to different viseme categories, were more easily learned than less salient visemes.
+
+
+This section discussed how individuals use competing input to extract meaning from speech. 
+These competing systems seem to be a mix between the language systems, as there is evidence of constant language coactivation [@peelle2015prediction, @desroches2022dynamics], as well as the implementation of the visual articulators [@tye2007auditory, @ marian2018language].
+These competing systems in bilinguals appear to combine aspects of both language and visual articulation, as there is evidence that language and visual processes are constantly activated.
+However, the efficacy of audio-visual information is contingent upon several factors, such as the speaker's phonetic inventory [@darcy2019blue,  @flege2021revised, @levy2008perception, @polka1995linguistic, @pegg1992preference], individual differences, and proficiency [@brancazio2005use, @hazan2006use]. 
+It is worth noting that lipreading is context and language-specific, and may not always be reliable [@inceoglu2021exploring, @darcy2019blue,  @hazan2006use, @best2007nonnative, @leonte2018supplementation]. 
+Additionally, differences in the research methodology used to assess audiovisual speech perception during L2 development challenge understanding its developmental trajectory.
+
+
+Lastly, no research study to date has investigated the association between proficiency and lipreading ability in english second-language learners of Spanish. 
+This underscores a research gap in the current understanding of audiovisual speech perception and warrants further investigation.
+Specifically, this study focuses on the capacity of second language learners to identify Spanish vowels, diphthongs, and syllabification using visual articulators. 
+It aims to investigate how the availability of visual aids, such as videos depicting the visible movements of the lips, tongue, and jaw in speech sounds, can enhance learners' understanding and recognition of these specific sounds and syllable patterns in the Spanish language. 
+The findings of this study have important implications for language pedagogy by shedding light on the potential benefits of incorporating visual cues in teaching and learning Spanish pronunciation.
+
+
+
+## Spanish vowels dipthongs and hiatus 
+
+The Spanish language comprises five vowel phonemes that can be classified based on their backness, height, and rounding. 
+These phonemes include /i/ (high back - not rounded), /u/ (high back - rounded), /e/ (medium central - not rounded), /o/ (medium back - rounded), and /a/ (low central - not rounded). 
+Although some of the vocalic phonemes in the Spanish system (i.e., /i e o u/) are also present in the English system, none of the Spanish vowels corresponds exactly to any of the English vowels [@hualde2005sounds]. 
+As a result, English speakers learning Spanish must reorganize their phonetic vowel space.
+In addition to the five vowel phonemes, Spanish has two glides, [u̯ ] labiovelar (as in jaula) and [i̯] palatal (as in peina) which are often considerd allophone and usually appear in the formation of a diphthong.
+
+
+Although the English language has more vocalic sounds than Spanish (ten or eleven depending on the variety), the Spanish language has a richer combination of diphthongs. 
+English long, tense vowels tend to create diphthong-like formations, which differ from the Spanish phonetic system. For example, sí, su, sé, and lo maintain their tenseness in contrast to sea, sue, say, and low.
+Diphthongs in Spanish are more differentiated than in English and can be classified as rising diphthongs ([ia, ie, io, iu, ua, ue, uo, ui]) or falling diphthongs ([ai, ei, oi, ui, au, eu, uo, iu]).
+The combination of Spanish vowels in diphthongs and hiatuses is subject to individual differences across speakers and can be influenced by dialect, sociolect, or idiolect. 
+For example, mid vowels are more open before /s/ in eastern Andalusia than in the northern counterparts of the peninsula [@hualde2005sounds].
+Furthermore, the existence of exceptional hiatuses and diphthongs within the same vowel formation is exemplified by an orthographic sequence such as [i̯a] or a hiatus [i.a].
+For instance, the vowel combination /ia/ can form either a hiatus, such as in cri.ada, or a diphthong, such as in dia.mante.
+Additionally, idiolectal variation can be observed in casual conversation, such as in the alternation between hiatuses and diphthongs in words like li.ana, pi.ano, and pi.ojo, versus the use of a diphthong in via.je.
+
+
+The context where the vowels are produced will be determining factor, as the degree of openness, height, and rounding can vary based on the context where they are produced. 
+For example, in [@bradlow2002clear], analysis's of the high vowels in relation to their context ( _bu_, _du_) demonstrated a considerable lowering of F2 in the context of /b/ relative to /d/. However, the same trend did not replicate for /i/. 
+As a result, of these characteristics, depending on their surroundings, active articulators will differ from one speaker to another in how they are visually accessible to the speaker.
+
+
+The research literature has focused primarily on production studies, receiving the perception literature less attention and obtaining confounding results.
+In [@gordon2008factors] studied the role of L1 English vowel space when perceiving Spanish vowel sounds. 
+The findings showed that learners at all proficiency levels mapped single vowel categories to more than one category in their native language (English). 
+The study concludes that a larger phonetic inventory of sounds can also be detrimental to perception.
+However, in [@elvin2014spanish, @escudero2012native] examined Spanish listeners’ perception of vowel contrasts in languages with more extensive vowel inventory than Spanish. 
+They found that Spanish listeners generally have less sensitivity in distinguishing vowel contrasts than listeners whose native language vowel system contains more vowels than Spanish.
+
+As of present, there exists a gap in our understanding regarding the potential impact of access to visual articulatory information on the ability of second language learners to distinguish Spanish vowels and diphthongs, as well as to comprehend and identify the associated syllable patterns. 
+To date, it remains unclear whether the provision of visual cues through the depiction of speech articulator movements can facilitate learners' recognition and understanding of these particular linguistic features within the Spanish language. 
+
+
+
+## Resyllabification 
+
+Resyllabification occurs when a specific word ends in a consonant, and the preceding word begins with a vowel, the consonant and the vowel link together in spoken speech [@hualde2013sonidos].
+For instance, we can find sequences such as _las alas_ and _la salas_, which according to [@hualde2013sonidos] should have the exact same pronunciation in non-aspirating dialects of Spanish.
+It is important to note that resylllabification ocureces in the context of /s/ with a vowel are dialect and speaker specific, as those speakers that omit or aspire the final /s/ are less likely to create ambiguities. 
+It is crucial to describe the speaker's variety of Spanish; as if the speaker produces an aspiration or omission, it will be less likely to create resyllabification ambiguity.
+For example, in Paraguayan Spanish and Yucatan the insertion of a glottal stop next to a vowel impedes resyllabification processes in due to the influence of indigenours languages [@michnowicz2016glottal].
+In nothem peninsular Spanish, resyllabification instances with /s/ and  /n/ are compelling and at the same time problematic, as it interacts with verbal morphology _queires_ vs _quiere_, or _ven_ vs _ve_. 
+Thus, minimal pairs can be easily formulated _buscas obras_, _busca sobras_ or _vende naves_, _venden aves_ in naturally spoken speech when the duration of acoustic-phonetic cues is not accounted for.
+
+
+On its more robust formulation, resyllabification analysis would predict indistinguishable formations between derived onsets and word-initial onsets [@hualde2005sounds].
+More recent studies have discussed this traditional perspective, as several research articles have found subphonemic differences in resyllabified /s/ categorizing derived onsets apart from canonical onsets and codas [@ hualde2015lenition, @lahoz2021spoken, @strycharczuk2016resyllabification and @scarpace2017acquisition].
+In [@hualde2015lenition] studied lenition processes in mid-northern peninsular Spanish and Catalan; specifically, the study looked at the alveolar fricatives /s/ and its contrast with Catalan /s/ vs./z/. 
+
+The findings from both languages indicated that word-final prevocalic consonant /s/ were of shorter duration when compared to those in the initial position. 
+It should be emphasized that the data was initially collected through spontaneous speech in native speakers of the respective languages, which was then subjected to subsequent measurement and analysis.
+
+
+
+[@strycharczuk2016resyllabification], performed a similar study but in a more controlled environment, allowing to control contextual cues that could affect prosody and speech rate in participants from the central and northern areas of the peninsula. 
+Their findings indicated that speakers do not consistently produce homogeneous formations when syllabifying, as evidenced by shorter coda productions of /s/ in comparison to those in the onset position. 
+The authors also observed that word-final /s/ was more likely to be voiced, although this outcome varied across speakers and contexts. 
+Lastly, the authors examined the vowels located between derived and canonical onsets but did not observe any statistically significant differences between them.
+
+
+Dissimilarities in /s/ duration were also found in [@lahoz2021spoken], which results mirrored [@hualde2015lenition and @strycharczuk2016resyllabification].
+Interestingly this study focused on consonant duration and its manipulation, finding that native speakers of Spanish can differentiate across conditions based on duration. 
+This study found an effect in the case of /s/ and /n/, where a short duration was biased toward a word-final interpretation. 
+Similarly, after considering other prosodic measures, the authors did not find other relevant suprasegmental features other than duration.  
+While the previously cited studies argue against a robust homophony formulation of resyllabification, their analysis focuses on native speaker perception. As resyllabification is a process that occurs in everyday communication, it is surprising that it is a topic largely overlooked by the Second Language Acquisition literature. 
+Indeed, the study conducted by [@scarpace2017acquisition] is the only one to date that has explored the acquisition of resyllabification in Spanish, along with the perception of /s/ and /n/ in resyllabification contexts. 
+However, it is difficult to contextualize these findings within the existing literature.
+On the one hand, the results align with previous research suggesting the heterogeneity of Spanish resyllabification and the importance of durational characteristics for speakers to distinguish between word boundaries. 
+On the other hand, the study found no significant difference in /s/ measurements between derived onsets and canonical, with only the duration of /n/ in word-initial position being the most salient.
+Moreover, the study materials presented an additional challenge, as the participants were native speakers of different varieties of Spanish, specifically Mexico and Colombia, which may have impacted prosodic features.
+
+
+
+
+## Spoken word recognition and syllafibication  
+
+The recognition of spoken words in a second language presents a challenge that hinges upon the establishment of accurate lexical representations of the phonological patterns embedded in the speech signal. 
+As such, individuals learning a second language must adopt strategies that rely on the phonological characteristics of the target language to effectively produce and recognize words.
+This can be problematic, as affirms [@otake1993mora], learners give more weight to the lexical candidates aligned with their languages’ rythimc unit, leading to occasional misunderstandings. 
+A stress-timed language such as English is a language where the stressed syllables have approximately regular intervals, and unstressed syllables shorten to fit this rhythm. 
+Stress-timed languages differ from syllable-timed languages, such as Spanish, in their syllable duration, as the Spanish syllable takes roughly the same amount of time to produce.
+
+
+The role of perceptual distance in word recognition is essential, as demonstrated in [@shea2010discovering]. 
+In the English language, vowels display reduced and centralized qualities in relation to their stressed counterparts, resulting in a variable syllable timing system. 
+In contrast, stressed and unstressed vowels in Spanish maintain the same quality, leading to a more homogeneous syllable duration.
+Nevertheless, the Spanish syllable cannot be homogeneous, as the duration of vowels, consonants and syllables under different stress conditions, position and inter-stress, intervals can vary, eg: [@ de1983segmental, @ hualde2005sounds, @ white2007calibrating].
+
+
+In Spanish, consonants across word boundaries are frequently misaligned (e.g.: _ves obras_, _ve sobras_), a phenomenon that has not received significant attention outside of theoretical phonology.
+While some studies have argued against the most radical views of resyllabification to explain this phenomenon, the topic remains largely unexplored in the research literature [@ hualde2015lenition, @lahoz2021spoken, @strycharczuk2016resyllabification, and @scarpace2017acquisition].
+ 
+ 
+On a weaker consideration of the resyllabification there is an ongoing discussion on how derived onsets can be distinguished from canonical onsets and codas. 
+In [@strycharczuk2016resyllabification] while discussing resyllabification their production results, the authors considered the possibility of representing derived onsets as ambisyllabic. 
+However, they argued that this approach cannot represent geminate consonants and derived onsets, as they are distinct phonological objects. 
+They reserved the concept of ambisyllabicity for geminates, as these consonants have traditionally been analyzed as occupying two prosodic slots - coda and onset - in autosegmental terms.
+In [@lahoz2021spoken] argues that resyllabified consonants can be considered as onsets after the post-lexical reorganization of syllable structure that occurs during resyllabification. 
+This is supported by the fact that derived onsets exhibit coda properties, indicating their intermediate status between canonical codas and canonical onsets. 
+This ambisyllabic phonological representation can account for the shorter duration of resyllabified consonants /s/ or /n/, which can lead listeners to interpret them as derived onsets.
+However, the perception of different consonants may be influenced by the coordination patterns of gestures involved in their articulation. 
+For example, /s/ and /n/ have a tongue-tip gesture that is anti-phase coordinated with the preceding vowel and in-phase coordinated with the following vowel.
+
+The research on resyllabification processes and syllable misalignment is dearth and confounding, consequence of an ongoing debate. 
+While investigations suggest that audiovisual speech perception is influenced by task demands and sensory reliability, as well as that visual cues may aid in identifying syllable boundaries, it remains uncertain how audiovisual information processing influences resyllabification and syllable misalignment. 
+Further research that manipulates the congruency of auditory and visual speech information is necessary to fully understand the relationship between sensory modalities and speech perception.
+
+
+## The present study
+
+
+## Research questions
+
+
+1.	Are second-language English learners of Spanish capable of identifying the point of articulation for vowels and consonants by visually observing the respective articulation in natural speech? Does a correlation exist between their accuracy and language proficiency?
+2.	To what extent does incongruity between auditory and visual inputs impede the processing of auditory information? Does the proficiency level of a learner influence their ability to effectively process and prioritize between two competing inputs?
+3.	(Does the syllabification pattern of word-final /s/ and /n/ involve a short duration at the word-final position as measured by Scarpace (2017) or does it follow a complete resyllabification, as proposed by Hualde and Prieto (2005)?) - TBD if added in the QP.
+To what extent can second language learners perceive duration differences associated with resyllabification? Does access to visual articulatory cues impact second language learners’ ability to perceive these differences? – if any.
+
+  # Should I change something on the RQ before doing the hypothesis? 
+
+
+# Study 1:
+
+This study aims to compare four distinct experimental conditions: audio-only, visual-only, audiovisual, and a mismatched audiovisual condition. 
+The primary aim of the study is to examine the extent to which Spanish vowels /a, e, i, o, u/ are recognized based on their corresponding point of articulation. 
+Additionally, this study aims to examine the potential impact and relationship between consonant articulation points and vowel perception. 
+To accomplish this, the study employs a set of consonants /p, t, k, b, d, g, f, ʎ, s and θ/, which are combined with the aforementioned vowels to create bi-syllable non-words. 
+A total of fifty items are created for each condition, resulting in a total of two hundred items across all conditions.
+
+
+The mismatched vowel condition was created by manipulating a vowel with a point of articulation opposite to that of the auditory input. 
+As a result, an incongruent visual stimulus was generated, diverging from the auditory input presented to the participant. 
+The procedure to create the mismatch condition involved maintaining the original visual input while introducing a competing auditory input, which diverged from the audio input participants were listening to. 
+The creation of the diverging or mismatched sound was based on the selection of phonemes that had an opposite point of articulation to the visual input. 
+Specifically, the phonemes /e/ (medium central - not rounded) and /o/ (medium back - rounded) were exchanged, /i/ (high back - not rounded) and /u/ (high back - rounded) were replaced by “a”, and lastly, /a/ (low central - not rounded) was substituted with “i”.
+
+
+```{r}
+#| label: fig-mdecision
+#| fig.cap: "Vowel mismatch decision."
+#| out.width: "50%"
+
+knitr::include_graphics(here("figs","vowel_mismatch_decision.jpg"))
+```
+
+
+# Study 2:
+
+Study 2, aims to investigate the articulatory perceptual properties of vowels in diphthongs, including both ascending /ie, uo, ue, ua/ and decreasing /ei, au, ai, au/ , as well as non-high vowel hiatuses /ae, ea, eo, oa/. 
+
+
+To accomplish this goal, a minimal pairs design was utilized, wherein 14 pairs of words were created that differed solely by the target vowel combination, which could form either a diphthong or a hiatus. Eg: ( _reino_ vs _reno_), ( _pauta_ vs _pata_). 
+As in study 1, four distinct experimental conditions were created: audio-only, visual-only, audiovisual, and a mismatched audiovisual condition, with a total of fifty six items. 
+Finally, the mismatch condition was created by interchanging visual and auditory information.
+
+
+
+# Study 3:
+
+Study 3 ---  comprises two distinct sections. In the first section, the investigation will analyze the prosodic measures and duration of the input of seven participants to ascertain whether they effectuate complete resyllabification.
+Importantly, the participants are drawn for this perception study are from the dialectal areas of Madrid (3), Barcelona (1), and Palma de Mallorca (1), Spain.---- ***TBD if added***
+
+
+In the second section, if the participants do not achieve complete resyllabification, the input will be presented to English second language learners of Spanish. 
+The objective of this section is to determine the ability of these learners to disambiguate the input based on prosodic measures. 
+Furthermore, the study will compare the performance of these learners in this task with their ability to access visual articulators for meaning extraction, as was done in Studies 1 and 2.
+
+
+
+# Materials
+
+The Lexical Test for Advanced Learners of Spanish (LexTALE) [@lemhofer2012introducing] is a widely used lexical decision task that provides a standardized measure of proficiency and vocabulary size in Spanish. 
+In this task, participants are presented with a series of words on a computer screen and must determine whether they are real or fake by pressing a corresponding key on the keyboard ('1' for real, '0' for fake). 
+Scores on the LexTALE range from -20 to 60, with scores of monolingual Spanish speakers typically exceeding 50. 
+Scores for individuals with little or no knowledge of Spanish tend to be negative, while adult learners with low to medium proficiency typically score between 0 and 25, and advanced learners generally score above 25.
+In this study, proficiency is considered as a continuous variable, with monolingual English speakers deemed to have little or no proficiency in Spanish (i.e., a negative score on the LexTALE). Participant scores on the LexTALE can be found in Table 1 of the study's data set.
+
+
+
+For studies 1, 2 and 3 the input material used as targets was produced by native Spanish speakers and presented in the context of a sentence. 
+In studies 1 and 2 the target items were presented within a sentence structure such as _"Digo X porque si"_.
+In study 3, the input material was also recorded naturally, but the target items were presented in  word sentences, eg: _"Las alas del pajaro son grandes"_ and _"En la calle ves obras"_.
+
+
+Every input item in the study was accompanied by all possible answers.
+This approach enabled to identify patterns in the participants' responses and to analyze the data more effectively.
+
+
+The audio recordings in this research paper were recorded in a sound-attenuated booth to minimize background noise. 
+The microphone used was capable of capturing a frequency response range of 20Hz to 20kHz, and had a bit depth/sample rate of 24/48, which allowed for high-quality audio recordings with detailed sound and low noise.
+In addition to the audio equipment, the camera included a 50 megapixel sensor with dimensions of 1/1.56 inches, 1.0 micrometer pixels, and an f/1.8-aperture lens. 
+These features allow for high-quality image capture, with the ability to capture fine detail and low-light performance. 
+Other features of the camera included Phase Detection Auto Focus (PDAF) and Optical Image Stabilization, which helped to ensure that the resulting images were sharp and in focus. 
+The distance between the camera equipment and the participants was approximately forty-five centimeters.
+
+
+Following data collection, the video images were trimmed to provide a constant frame that ranged from the septal cartilage to the mandible mentalis muscle, which was consistently visible throughout the video. 
+To mitigate the effects of the participants' involuntary left and right body movements, the video was also edited to ensure that at least 5 cm to the right and left from the risorius muscle were always visible. 
+This editing process had a twofold purpose: to provide participants with a clear view of the relevant visual articulators, and to standardize the video footage and ensure consistency across the data set.
+
+
+# Procedure 
+
+The experiment was conducted using the Qualtrics platform. 
+Prior to commencing the study, participants were required to provide consent and complete the Lexical Test for Advanced Learners of Spanish (LexTALE) to assess their proficiency level. 
+The experiment then proceeded, and in all three studies, the randomization option tool provided by Qualtrics was employed.
+Upon completion of the study, participants were asked to provide biographical and language history information to confirm that the pool of participants consisted solely of second language learners. 
+This information was collected to ensure that the study's findings were not influenced by other factors unrelated to the participants' second language learning experience.
+
+
+## Participants
+
+Given the versatility of the Qualtrics platform, the study's recruitment strategy targeted English second language learners of Spanish across various universities in the United States, as well as different learning centers that provided Spanish language instruction to English speakers in Spain. 
+
+We recruited  195 participants in total, with average proficiency scores ranging from 59.98 to 65.25 across the studies. 
+The standard deviation for each study indicates some variability in proficiency scores, with the overall sample having an SD of 18.14. 
+The proficiency score range for all studies was 38.22 to 96.67, demonstrating a wide distribution of language proficiency levels among participants.
+
+
+```{r}
+#| label: tbl-lextale-descriptives
+#| tbl-cap: "This is a caption"
+lextale_descriptives %>%
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r"))
+```
+
+
+
+## Statistical analyses
+
+
+# Results
+
+
+The table [@tbl-accuracy_by_study] summarizes the accuracy scores and standard deviations across three studies (s1, s2, s3) in three experimental conditions (audio-only, audiovisual, and visual-only).
+In Study 1, the audio-only and audio-visual conditions exhibited comparable mean accuracy scores (0.8404 and 0.8399, respectively), whereas the visual-only condition demonstrated a reduced score (0.6433).
+In Study 2, both the audio-only and audio-visual conditions showed elevated mean accuracy scores (0.9563 and 0.9378), respectively, accompanied by a reduced standard deviation in comparison to Study 1.
+Study 3 revealed the lowest mean accuracy scores across all conditions, with values of 0.6005 for audio-only and 0.6111 for audiovisual. 
+The standard deviations in this study were broader than those observed in Studies 1 and 2.
+
+```{r}
+#| label: tbl-accuracy_by_study
+#| tbl-cap: "Accuracy by study."
+#| out.width: "100%"
+
+accuracy_by_study %>%
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r"), 
+               caption = "Accuracy by study.",
+             label = "tbl-accuracy_by_study")
+```
+
+
+
+The complexity level escalates incrementally in each study. 
+This implies challenges not only in lip-reading but also in discerning the presented context and item, with resyllabification being the most intricate item. 
+Nevertheless, second language speakers possess the capacity to perceive the speaker's visual articulators.
+
+In study 1 a Bayesian multinomial logistic regression was used while studies 2 and 3 utilize a logistic regression model. 
+In all models, the median posterior point estimates are presented for each parameter of interest, along with the 95% highest density interval (HDI), the percentage of the HDI region within the ROPE, and the maximum probability of effect (MPE). 
+For statistical inferences, our emphasis is on estimation rather than decision-making rules. Generally, a posterior distribution for a parameter β is considered to provide strong evidence for a particular effect when 95% of the HDI lies outside the ROPE and the MPE is high (i.e., values close to 1). 
+We performed all analyses using R and fit all models using the probabilistic programming language Stan via the R package brms (@burkner2017brms).
+
+Proficiency on the present studies is treated as a continuous variable. [@tbl-accuracy_by_study] shows participants had a wide range of scores (Min. = 38.22, Max. = 96.67), suggesting all proficiency levels were likely represented in the sample
+
+
+
+## Study 1
+
+This study utilized a Bayesian multinomial logistic regression to assess the probability of an observation being identified as one of the five Spanish vowels (/a/,/e/,/i/,/o/,/u/). 
+The responses were modeled as a function of condition and language proficiency.
+Specifically, the model evaluated the likelihood of identifying a specific vowel in "audio," "visual-only," "audiovisual," and "audiovisual mismatch" conditions. 
+The model likelihood was categorical with a logit linking function. 
+The random effects structure included varying intercepts for each participant and item, as well as varying slopes for the vowel x condition interaction. 
+The model included regularizing, weakly informative priors for all parameters (see supplementary materials).
+The effects were reported in the probability space for ease of interpretation. 
+The complete model output can be found in the supplementary materials. 
+
+What follows provides an explanation of the likelihood of participants selecting each vowel within the four aforementioned conditions.
+
+
+
+
+### Audio only condition
+
+Participants' likelihood of selecting vowels /a/, /e/, /i/ and /o/  when hearing it was at ceiling, scoring `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_a_a", val = out)`, `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_e_e", val = out)`, `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_i_i", val = out)`and `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_o_o", val = out)` respectively. 
+However the likelihood of selecting /u/ was significantly lower `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_u_u", val = out)` as participants were likely to select /o/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_u_o", val = out)` of the times. 
+
+However as depicted in [@fig-s1-all], a notable shift in the probability of response as a function of proficiency is observed. 
+Specifically, an increase in proficiency is associated with a decrease in the likelihood of choosing /o/ over /u/ when listening to /u/ only (β =−1.02 HDI =[-2.23, 0.25] ROPE = 3.32, MPE = 0.95).
+Additionally, very low proficiency students confused /e/ and /i/ aurally, and the chances to wrongly select this vowels decreased as proficiency increased (See supplementary materials).
+
+
+### Audiovisual condition
+
+Audiovisual likeliness of selecting vowels mirrored the audio only in the vowels /a/, /e/, /i/ and /o/ also situating their responses at ceiling `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "av_a_a", val = out)`, `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "av_e_e", val = out)`, `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "av_i_i", val = out)` and `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "av_o_o", val = out)` respectively.
+
+Interestingly, the probability of accurately identifying /u/ while concentrating on its audiovisual indicators demonstrated an enhancement in comparison to the solely auditory input,  `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "av_u_u", val = out)` in opposition to `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "ao_u_u", val = out)`.
+
+Mirroring the audio-only condition, a shift in proficiency is associated with with a higher chance to select the correct vowel. 
+Not only that, but also, participants start to differentiate between /u/ and /o/ at lower proficiency levels than when the audio only condition is provided, indicating a positive relationship with the visual input
+(β = 1.88 HDI =[0.96, 2.92] ROPE = 0, MPE = 1).
+In a consistent relationship with the audio-only condition, an improvement in proficiency corresponds to an increased likelihood of selecting the correct vowel.
+
+
+### Visual only condition
+
+Unsurprisingly, the visual condition lowered accuracy probabilities. 
+Among all the vowels assessed /a/ demonstrated the highest probability of accurate perception, with a probability of `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "vo_a_a", val = out)`.
+
+The vowels /e/ and /i/ presented a significant interaction, whereby visually attending to /i/ led to the probabilities of perceiving /i/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "vo_i_i", val = out)`, and the probabilities of confusing it with /e/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "vo_i_e", val = out)`. 
+
+Interestingly, this interaction did not exhibit the same level of significance when reversed, where attending to /e/ resulted in the probabilities of perceiving /e/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "vo_i_i", val = out)` and confounding it for /i/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "vo_e_i", val = out)`
+
+Similar to the audio and audiovisual conditions, as proficiency increased, the likehood of selecting the correct vowel also increased.
+The place of articulation also exhibited a propensity for ambiguity between the vowels /u/ and /o/, as seen in table [@tbl-s1_multi_response_tab] leading to difficulties when differentiating them. 
+This pattern appears to follow a confusion constrained within the same place of articulation.
+In essence, the vowels /e/ and /i/ are susceptible to being misidentified in a way that is analogous to the confusion between /u/ and /o/. 
+This implies that front vowels, much like back vowels, can be easily interchanged with one another. 
+It is important to note that front and back vowels do not exhibit a relevant statical confusion between the two places of articulation. 
+ 
+
+
+### Mismatch between visual and audio conditions
+
+The mismatch condition as previously indicated in [@fig-mdecision] shows the visual articulation of /a/ is hinged into the aural output of /i/, demonstrating the mismatch condition. 
+
+In response to the mismatch condition, the results show that the majority of participants exhibited a preference for the aural channel, that is, selecting /i/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "mm_a_i", val = out)` , followed by /e/ at`r pull_from_tib(tabs$s1_multi_response_tab, id, row = "mm_a_e", val = out)`, and finally the visually articulated /a/ at `r pull_from_tib(tabs$s1_multi_response_tab, id, row = "mm_a_a", val = out)`.
+However, as depicted in [@fig-s1-all], a notable shift in the probability of response as a function of proficiency is observed. 
+That is as proficiency increases, the probabilities of choosing what they see increases, overriding what participants are hearing.
+Results show that when participants are presented with the visual articulation of the vowel /a/ while simultaneously hearing the sound of the vowel /i/ (a - mismatch condition), their likelihood of choosing the visually articulated /a/ increased as their proficiency increases. *No clue how to give this info based on the table :(*
+In other words, as participants become more proficient, they are less likely to choose the mismatched sound /i/ or even the aurally similar /e/, and more likely to select the visually-articulated /a/. 
+
+
+The fabricated double pairs of /e/-/o/ and /u/-/a/, which are constructed based on the previously described mismatch condition, exhibit a comparable response pattern among participants (see [@tbl-s1_multi_response_tab]).
+That is, lower proficiency students are more focused on the auditory input, while higher proficiency students demonstrate greater attention to the visual facial articulators.  
+Findings suggest that increasing language proficiency results in a stronger reliance on visual cues overriding auditory perception, thus indicating the potential influence of visual input in speech perception.
+
+ 
+```{r}
+#| label: fig-s1-all
+#| fig.cap: "Study 1 all responses"
+#| out.width: "100%"
+
+knitr::include_graphics(here("figs", "s1_all.png"))
+```
+
+
+## Experiment 2
+
+In this study, we employed a logistic regression model to investigate the likelihood of correctly selecting the correct combination of vowels in relation to the participant' language proficiency in the same aforementioned four conditions. 
+
+The results of the logistic regression model are presented in [@tbl-s2_logit_tab], which includes estimates, the region of practical equivalence (ROPE), mean posterior estimates (MPE), potential scale reduction factors (Rhat), effective sample sizes (ESS), medians,highest density intervals (HDI), and the intercept. 
+The logistic regression model employs the logit linking function to transform the binary criterion (vowel combination identification success) into log-odds, facilitating linear modeling with predictor variables. 
+The intercept in logistic regression represents the log-odds of accurately identifying a vowel combination in every condition when all predictor variables are at their reference levels, which, in this study, are the mean values due to standardization. 
+It does not provide a direct estimate of the dependent variable; rather, it offers the log-odds that can be converted into probability using the logistic function. 
+This yields the likelihood of correct vowel identification in relation to the Nucleus (the probability of choosing either a diphthong or a hiatus) and language proficiency.
+
+
+### Audio only 
+
+The probability of accurately selecting the appropriate response was at ceiling for both diphthongs and monopthongs.
+In the Audio condition, the intercept  `r pull_from_tib(tabs$s2_logit_tab, id, row = "Audio_Intercept", val = Estimate)` suggests a high baseline log odds in the likelihood of selecting the response selection.
+The LexTALE estimate (β = 1.45,HDI [0.68, 2.4], ROPE = 0, MPE = 1) *# preguntar si ahcer con todos* denotes a positive relationship between language proficiency and correct response selection.
+Specifically, a one-unit increase in proficiency corresponds to an increase of 1.45 in the log odds of correctly selecting the appropriate combination of vowels when all predictor variables are at their reference levels.
+There was no effect on the nucleus condition.
+
+
+### Audiovisual
+
+For the Audiovisual condition, the intercept estimate was 5.89 [4.94, 7.03]). 
+As in the audio-only condition the nucleus condition observed no effect. 
+The LexTALE estimate of 1.47 ([0.74, 2.31]) demonstrated a positive relationship between language proficiency and the likelihood of correctly selecting the adequate response in the A/V condition. 
+This is, a one-unit increase in proficiency would correspond to an increase of 1.47 in the log odds of correctly selecting the appropriate combination of vowels, which postulate a lighter increase over the audio-only condition. 
+
+
+### Visual only 
+
+In the Visual condition, the intercept (1.31, [0.95, 1.67]) reflects a lower baseline log-odds of correct response selection than the Audio and A/V conditions. 
+The Nucleus estimate demonstrates an uncertain relationship with the outcome variable. 
+
+Interestingly the LexTALE estimate (-0.26, [-0.42, -0.11]) suggests a negative relationship between language proficiency and correct response selection. 
+
+Oppositely to the audio-only and audiovisual conditions, a one-unit increase in proficiency would correspond with a decrease of -0.26 in the log odds of correctly selecting the appropriate combination of vowels when all predictor variables are at their reference levels.
+
+
+### Mismatch
+
+In the Audiovisual mismatch condition, the log odds of accurate vowel identification was negative (-2.53,[-2.99, -2.12]]) 
+As in the other condition, the nucleus or vowel interaction did not show any effect.
+The LexTALE estimate (1.44 [1.07, 1.78]) reveals a strong positive relationship between language proficiency and the likelihood of a correct response.
+This is a one-unit increase in proficiency would correspond to an increase of 1.44 in the log odds of correctly selecting the appropriate combination of vowels when a confounded input was presented.
+
+
+This logistic regression model analyzed the effects of Nucleus, LexTALE, and their interaction across four conditions (audio-only, audiovisual, visual-only and mismatch) on the likelihood of accurately selecting the correct response.
+
+Results suggest varying baseline log-odds of correct response selection across the different conditions, with the audio condition having the highest baseline and the mismatch condition having the lowest. 
+The effect of Nucleus on the likelihood of a correct response had no effect across all conditions, while LexTALE consistently demonstrated a positive relationship with the outcome variable in audio, audiovisual, and mismatch conditions, but a negative relationship in the Visual condition.
+
+
+
+## Experiment 3
+
+This study also used a logistic regression model to analyze the likelihood of correctly selecting the adequate combination of syllables in relation to the participant’s language proficiency. 
+The model was coded in the following parameters: consonant status (canonical vs resyllabified), consonant (/n/ or/s/ resyllabification), lexTALE, and their interactions on the likelihood of correctly selecting the presented input across three conditions: Audio, Visual, and Audio/Visual (A/V). 
+The results of the logistic regression model are presented in [@tbl-s3_logit_tab] including practical equivalence (ROPE), mean posterior estimates (MPE), potential scale reduction factors (Rhat), effective sample sizes (ESS), medians, highest density intervals (HDI), and the intercept is also provided.
+Similar to study 2, the intercept represents the log-odds of successfully identifying the consonant combination when all predictor variables are at their reference levels, which, in the study, are at their mean values due to standardization. 
+As previously indicated in [@tbl-accuracy_by_study] the third experiment was the one that experimented the lowest accuracy response rate, being the audiovisual condition the most facilitating at 0.6110839, followed by audio-only  at 0.6005401 and visual-only at 0.5446473.
+There was not mismatched condition for this study.
+
+
+### Audio Condition
+
+In the audio condition, the Intercept had an estimate of 0.42 [0.22, 0.63] with a 95% highest density interval (HDI). 
+Consonant status did not show a relevant effect 0.05 with a 95% HDI of [-0.13, 0.24].
+The interaction of consonant status, consonant, and LexTALE had an estimate of 0.10 with a 95% HDI of [0.03, 0.17] showing that the combination of these factors influenced performance.
+Specifically, a one-unit increase in proficiency would correspond to an increase of 0.05 in the log odds of correctly selecting the appropriate combination of consonats when all predictor variables are at their reference levels.
+As [@fig-s3-all] the resyllabified condition had slightly more accuracy as a function of proficiency. 
+Additionally, the /s/ condition had more chances to be selected over the /n/ at lower proficiency levels. 
+Overall, the audio condition results suggest that the combination of consonant status, consonant, and LexTALE had a positive effect on participants' performance.
+
+
+```{r}
+#| label: fig-s3-all
+#| fig.cap: "Study 1 all responses"
+#| out.width: "100%"
+
+knitr::include_graphics(here("figs", "s3_all.png"))
+```
+
+
+### Audio-Visual Condition
+In the Audio-visual condition, the Intercept values were the highest with an estimate of 0.46 [0.3, 0.63] with a 95% HDI, indicating a baseline performance of 0.46 in this condition.
+As in the audio-only condition consonant status had no effect 0.00 with a 95% HDI of [-0.14, 0.15]
+Oppositely to the audio in the audiovisual condition the proficiency LexTALE, -0.02 with a 95% HDI of [-0.09, 0.05] did not show a significant effect on the consonant status condition, as seen in [@fig-s3-all].
+However, the consonant and LexTALE interaction had an estimate of 0.09 with a 95% HDI of [0, 0.19], indicating a positive slight effect. 
+Specifically, a one-unit increment in proficiency can be associated with 0.09 in the log odd of accurately selecting /n/ or /s/.
+Overall, a combination of consonant status, consonant, and LexTALE had a limited effect on participants' performance in the A/V condition, with varying levels of influence for different interactions.
+
+
+### Visual Condition
+In the visual condition, the Intercept had an estimate of 0.21 with a 95% HDI of [0.05, 0.37], indicating a baseline performance of 0.21 in this condition, the lowest of the three. 
+## don’t really know what to report here. All estimates are pretty low. 
+Consonant status as in the other two conditions did not have an effect. 
+Similarly, consonant and LexTALE, consonant status did not have an effect either. 
+Interestingly, the combination of the three, this is the interaction of consonant status, consonant, and LexTALE had an estimate of 0.10 with a 95% HDI of [0.03, 0.17] demonstrating that these factors collectively impacted performance.
+The results for the visual condition suggest that the combination of consonant status, consonant, and LexTALE affected participants' performance, albeit with varying magnitudes.
+
+
+In conclusion, the baseline log-odds of selecting the correct were the highest for A/V condition (Estimate: 0.46, [0.30, 0.63]), followed by the Audio condition (Estimate: 0.42, 95% HDI [0.22, 0.63]), and the Visual condition (Estimate: 0.21, [0.05, 0.37]). 
+The results of the study demonstrated that participants' performance was affected by the audio, visual-only, and audio-visual conditions, with each condition showing unique patterns of interaction between consonant status, consonant, and LexTALE. 
+The audio condition showed the most significant impact of the combination of these factors on performance, followed by the visual condition.
+In contrast, the audiovisual condition exhibited a weaker influence of these factors on participants' performance. 
+#and effect might not be seen in a/v, as visual input helped lower proficiency students?
+
+
+# Discussion
+
+This research aimed to better understand how visual information from the lips, jaw, face, tongue, and teeth can provide additional cues that may ease input processing, in English second language learners of Spanish. 
+To answer this question, three experimental studies were conducted. 
+
+
+Study 1 explored the role of visual cues in the perception of Spanish vowels through four experimental conditions: audio-only, visual-only, audiovisual, and mismatched audiovisual. 
+Results indicate that as language proficiency increases, learners can rely more on visual cues, which in turn aids speech perception and reduces misidentification. 
+
+
+In the audio-only condition, learners were generally accurate in recognizing most vowels, with the notable exception of /u/, which was frequently confused with /o/. 
+This confusion among very low proficiency language learners can be attributed to the absence of a well-formed phonetic category for the Spanish /u/. 
+As a result, they might mistake the Spanish /u/ (as in "pupu") for the English /ʊ/ (as in "foot"), which share similar articulatory characteristics. 
+However, as learners' language proficiency increased, their ability to accurately identify the correct vowel improved, indicating the development of more distinct phonetic categories for the Spanish vowels.
+
+
+The audiovisual condition, participants' accuracy in identifying vowels improved at lower proficiency levels, suggesting that the visual input positively impacts speech perception. 
+The likelihood of choosing the correct vowel increased with higher proficiency levels.
+
+
+The visual-only condition revealed a lower overall accuracy in vowel recognition. There was confusion between front vowels (/e/ and /i/) and back vowels (/u/ and /o/), however the likelihood of choosing the correct vowel increased with higher proficiency levels, similar to other conditions.
+
+
+In the mismatch condition, where the visual and auditory inputs were incongruent, higher proficiency learners were more likely to attend visual articulation, while low proficiency students prioritized the auditory channel. 
+
+
+The findings show that the most salient vowel, /a/, was easiest to recognize, while pairs of front and back vowels were often confused. 
+This is consistent with studies in other languages, such eg [@pegg1992preference, inceoglu2021exploring], which found that more visually salient visemes were easier to recognize compared to less salient ones. 
+
+
+The study's findings align with the Speech Learning Model (SLM) and the Perceptual Assimilation Model for Second Language Learners (PAM-L2). 
+Both theories suggest that L2 learners initially rely on L1 phonological categories for L2 perception, and as proficiency increases, they form new phonetic categories for the L2. 
+The results support these theories, as learners with higher proficiency levels were more accurate in vowel perception and relied more on visual cues. 
+More importantly, learners develop not only new phonetic categories [@flege2021revised] but also new visemes for L2 sounds as their proficiency increases, this formation of visemes has a double effect. 
+First, it helps with perception, as previous research has shown, having access to visual articulators helps in perception [@]. 
+And second, when faced with conflicting input, highly proficient participants can identify and ignore auditory information, focusing on interpreting the presented viseme.# more theories that I could relate with? 
+
+
+
+Study 2 analyzed vowel combinations, finding no effects between a monophthong and a diphthong in the perception of the four aforementioned conditions. 
+Audio-only and audiovisual, both had ceiling baseline log odds of the correct response, showing a slight effect in proficiency. 
+
+
+Interestingly, the visual-only condition displayed a negative relationship between language proficiency and correct response selection, meaning that high-proficiency learners performed worse than low-proficiency speakers in recognizing words such as _peina_ vs _pena_. 
+This outcome can be related to intersection density, as defined by [@tye2007auditory]. 
+Intersection density refers to the presence of lexical competitors that can be either visual (viseme) or auditory (phoneme).
+
+
+In the case of high-proficiency learners, they are more likely to confuse words with higher intersection density, as they possess a larger vocabulary and more extensive knowledge of the language. 
+This, in turn, creates more opportunities for lexical competition compared to learners with lower proficiency levels. 
+As a result, high high-proficiency learners might experience more difficulty in accurately selecting the correct response in the visual-only condition, as they are faced with a greater number of similar word forms to differentiate between.
+
+
+In the same line of argumentation, these results can also align with [@marian2018language] where those participants that were high proficiency in two languages had more chances to confound visual input, being more susceptible to experiment with the McGurk effect. 
+
+
+The mismatch condition exhibited the lowest log odds of accuracy. 
+As in study 1, the lower proficiency learners attended more to the auditory channel, whereas as proficiency increased, the log odds of selecting what they were visually attending increased. 
+These findings align with those from Study 1, showing that high-proficiency participants possess the ability to identify an input mismatch and suppress the auditory channel in favor of the visual one.
+
+
+
+
+Study 3 also employed a logistic regression model to investigate the likelihood of selecting re-syllabification combinations in relation to participants' language proficiency across three conditions: audio, visual, and audiovisual.
+The audiovisual condition exhibited the highest accuracy, followed by the audio-only and visual-only conditions. While the accuracy levels in the visual-only condition were notably lower compared to the other two, all three conditions demonstrated statistically significant differences. 
+Consistent with Study 1, the findings suggest incorporating visual input alongside audio aids in the disambiguation of items, especially for those with lower proficiency students.
+Finally, an effect in proficiency is observed, this is, participants with higher proficiency levels were more likely to be more accurate in audio and visual only, showing a positive effect of the visual input. 
+These results, align with a more flexible approach to resyllabification, [@strycharczuk2016resyllabification],[@lahoz2021spoken], [@scarpace2017acquisition] as second language learners were able to differentiate syllable combinations and consonants.  
+
+
+
+# Conclusion
+
+This research paper investigated whether second language learners can benefit from access to visual information when learning Spanish as an English speaker. 
+To address this question, three distinct studies were conducted, each contributing a different theoretical perspective. 
+The overall conclusion is that English second language learners of Spanish can benefit from visual input, but the extent of this benefit depends on the context.
+
+
+As language proficiency increases, learners show a stronger reliance on visual cues, enhancing speech perception and reducing confusion between similar-sounding vowels. 
+In the visual-only condition, the place of articulation plays a significant role in vowel perception, with front and back vowels often being confused within their respective groups. 
+The mismatch condition reveals that higher proficiency learners are more likely to rely on visual articulation, even when it contradicts auditory input. 
+The scope of this study can be extrapolated to the importance of integrating visual cues in language instruction to improve phonetic discrimination, particularly for learners with developing linguistic abilities.
+
+
+
+
+# References
+
+
+
+# Aditional materials
+
+
+```{r}
+#| label: tbl-s1_multi_response_tab
+#| fig.cap: "funcionara?"
+#| out.width: "100%"
+
+knitr::kable(tabs[["s1_multi_response_tab"]],
+             format = "pandoc", align = c("l", "r", "r", "r", "r"),
+             caption = "Summary of multi-response variables.",
+             label = "s1_multi_response_tab")
+
+
+```
+
+
+# Delete prob, too big - would this be useful? 
+
+```{r}
+tabs$s1_multi_tab %>% 
+  filter(Condition %in% c("Visual", "Audio", "A/V", "A/V mismatch")) %>% 
+  mutate(Condition = if_else((Condition == "Visual" | Condition == "Audio" | Condition == "A/V" | Condition == "A/V mismatch") & Parameter == "Intercept", 
+                             .$Condition, " ")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "l", "r", "r", "r", "r", "r"))
+
+```
+
+```{r}
+#| label: tbl-s2_logit_tab 
+#| tbl-cap: "Summary of multi-response variables."
+#| out.width: "100%"
+
+knitr::kable(tabs[["s2_logit_tab"]],
+             format = "pandoc", align = c("l", "r", "r", "r", "r"),
+             caption = "Summary of multi-response variables.",
+             label = "tbl-s2_logit_tab")
+```
+
+
+```{r}
+#| label: tbl-s3_logit_tab 
+#| tbl-cap: "Summary of multi-response variables."
+#| out.width: "100%"
+
+knitr::kable(tabs[["s3_logit_tab"]],
+             format = "pandoc", align = c("l", "r", "r", "r", "r"),
+             caption = "Summary of multi-response variables.",
+             label = "tbl-s3_logit_tab")
+```
+
+
+
